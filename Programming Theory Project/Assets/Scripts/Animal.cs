@@ -9,7 +9,7 @@ public class Animal : MonoBehaviour
     protected float rotationSpeed = 50;
     protected float jumpForceBase;
     protected CharacterController controller;
-    [SerializeField]protected float jumpForce;
+    
     [SerializeField]protected bool isGrounded = true;
     private Vector3 playerVelocity;
     private float gravityValue = -9.81f;
@@ -56,8 +56,8 @@ public class Animal : MonoBehaviour
 
     public virtual void Jump() 
     {
-        playerVelocity.y += Mathf.Sqrt(jumpForce * -3.0f * gravityValue) ;
-        jumpForce = jumpForceBase;
+        playerVelocity.y += Mathf.Sqrt(jumpForceBase * -3.0f * gravityValue) ;
+        
     }
 
     public void Initialize()
@@ -65,6 +65,10 @@ public class Animal : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
     }
 
+    public virtual void MakeNoise()
+    { 
+        //AnimalVoice General
+    }
 
   
  }

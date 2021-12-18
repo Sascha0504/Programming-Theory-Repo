@@ -10,9 +10,9 @@ public class Cat : Animal
     // Start is called before the first frame update
     void Start()
     {
-        this.playerSpeed = 5;
-        this.jumpForceBase = 2;
-        this.jumpForce = jumpForceBase;
+        playerSpeed = 5;
+        jumpForceBase = 2;
+
         Initialize();
         if (Instance != null)
         {
@@ -28,7 +28,7 @@ public class Cat : Animal
     // Update is called once per frame
     void Update()
     {
-        
+
         PlayerMovement();
 
         if (controller.isGrounded && Input.GetButtonDown("Jump"))

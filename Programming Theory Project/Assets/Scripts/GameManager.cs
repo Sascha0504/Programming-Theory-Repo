@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameManager Instance { get; private set; }
+    public enum Animals{cat = 0 ,dog = 1 }
+    public static GameManager Instance { get; private set; }
+    public Animals selection;
+
     // Start is called before the first frame update
+
     private void Awake()
     {
         if (Instance != null) 
@@ -26,5 +31,18 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnButtonClickCat()
+    {
+        selection = Animals.cat;
+        SceneManager.LoadScene(1);
+        
+    }
+
+    public void OnButtonClickDog()
+    {
+        selection = Animals.dog ;
+        SceneManager.LoadScene(1);
     }
 }

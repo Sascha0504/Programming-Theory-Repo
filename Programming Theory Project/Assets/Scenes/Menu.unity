@@ -693,7 +693,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1409496377}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnButtonPressDog
+        m_MethodName: OnButtonClickDog
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1249,7 +1249,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1409496377}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnButtonPressCat
+        m_MethodName: OnButtonClickCat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1326,6 +1326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79a7561567e2e3048bfbd047d49ba248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selection: 
 --- !u!4 &1409496378
 Transform:
   m_ObjectHideFlags: 0
